@@ -130,7 +130,7 @@ main.page { padding-block: 3rem 0; }
 .page-head > p { color: var(--ink-2); max-width: 40rem; }
 
 .block { padding-top: 2.75rem; }
-.block:first-of-type { padding-top: 0; }
+.page-head + .block { padding-top: 0; }   /* the page head's own bottom padding separates them */
 .block > h2 {
   font-size: 1.4rem; line-height: 1.25;
   padding-bottom: 0.6rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--rule);
@@ -164,7 +164,7 @@ main.page { padding-block: 3rem 0; }
 .photo-initials { font-family: var(--font-text); font-size: 2.5rem; color: var(--accent); }
 
 .edu-list { gap: 1.25rem; }
-.home-edu { margin-top: 0.75rem; }
+.home-edu { margin-top: 0; }
 .edu { display: grid; gap: 0.1rem; font-size: 0.95rem; }
 .edu-head p, .entry-head p { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0 1rem; align-items: baseline; }
 .degree { font-weight: 600; }
