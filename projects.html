@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Projects · Samson Lam – Samson Lam</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-html-640605f58ae58ee79329c070719e555b.min.css" rel="stylesheet" append-hash="true" data-mode="light">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-projects .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-id','listing-title','listing-date','listing-sortdate','listing-revised','listing-type','listing-question','listing-finding','listing-repo','listing-report','listing-detail',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-id","listing-title","listing-date","listing-sortdate","listing-revised","listing-type","listing-question","listing-finding","listing-repo","listing-report","listing-detail"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-projects'] = new List('listing-projects', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+
+  <script defer="" src="assets/katex/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet" href="assets/katex/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="site-name" href="index.html">Samson Lam</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="experience.html">Experience</a>
+      <a href="notes.html">Notes</a>
+    </nav>
+  </div>
+</header>
+<script>
+(function () {
+  var f = location.pathname.split('/').pop();
+  var links = document.querySelectorAll('.site-nav a');
+  var hit = null;
+  links.forEach(function (a) { if (a.getAttribute('href') === f) hit = a; });
+  if (!hit) hit = links[0];
+  hit.setAttribute('aria-current', 'page');
+})();
+</script>
+<main id="content" class="wrap page"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="projects" class="page-head">
+<h1>Projects</h1>
+<div class="proj-filter" role="group" aria-label="Show projects by type">
+<button type="button" data-filter="all" aria-pressed="true">
+All <span class="n"></span>
+</button>
+<button type="button" data-filter="independent" aria-pressed="false">
+Independent <span class="n"></span>
+</button>
+<button type="button" data-filter="course" aria-pressed="false">
+Course <span class="n"></span>
+</button>
+</div>
+</section>
+<div id="listing-projects" class="quarto-listing quarto-listing-container-custom">
+<ol class="proj-list">
+
+<li class="proj" data-kind="independent">
+<h2 class="proj-title">Bayesian Evidence on the Random Walk in Intraday Price Paths</h2>
+<p class="proj-meta"><span class="proj-date">Oct 2026</span><span class="sep">·</span><span class="kind kind-independent">Independent</span><span class="sep">·</span><span class="proj-rev">first version Jul 2024</span></p>
+<p class="proj-q">How much evidence do 5-hour price paths in E-mini S&amp;P 500 futures (ES), EUR/USD and Bitcoin (BTC) give for or against the random walk from October 2024 to September 2026, and how sensitive is it to the prior?</p>
+<p class="proj-finding">For EUR/USD and BTC, the Bayes factors in favor of the random walk rise from about 1 to between 4 and 12 as the prior widens, so the strength of the evidence depends largely on the prior. The ES paths rise more often than they fall, but reordering the returns within each path leaves this almost unchanged, so it reflects the drift and distribution of hourly returns, not dependence between them. Under the unit-information prior, none of 9 lagged predictors is selected or improves forecasts materially.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/bayesian-intraday-random-walk/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/bayesian-intraday-random-walk">Code</a></p>
+
+</li>
+
+<li class="proj" data-kind="independent">
+<h2 class="proj-title">Do Cointegration-based Pairs Remain Profitable?</h2>
+<p class="proj-meta"><span class="proj-date">Oct 2026</span><span class="sep">·</span><span class="kind kind-independent">Independent</span><span class="sep">·</span><span class="proj-rev">first version Jun 2024</span></p>
+<p class="proj-q">Does cointegration-based pair formation in the S&amp;P 500 remain profitable out of sample from 2010 to 2025, and does it depend on the formation method, the stock grouping or the window length?</p>
+<p class="proj-finding">No formation choice is consistently profitable: in the 2020–2025 testing period, the top-decile spreads of every method, those with the strongest formation evidence against a random-walk null, lose 0.70% to 1.34% a year after trading and borrowing costs, and their mean reversion persists little longer than that of spreads formed on random walks.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/cointegration-pairs-modern/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/cointegration-pairs-modern">Code</a></p>
+
+</li>
+
+<li class="proj" data-kind="independent">
+<h2 class="proj-title">Price Path Embeddings in a Hang Seng Index Portfolio</h2>
+<p class="proj-meta"><span class="proj-date">Aug 2026</span><span class="sep">·</span><span class="kind kind-independent">Independent</span><span class="sep">·</span><span class="proj-rev">first version Nov 2024</span></p>
+<p class="proj-q">Do PCA and VAE embeddings of a stock's past-year returns and technical indicators predict the next-month returns of Hang Seng Index stocks from September 2021 to August 2026, and what do they deliver in a long-only portfolio with a derivatives overlay?</p>
+<p class="proj-finding">The forecast has a rank information coefficient near 0.07 (t near 2.5) and amounts to past-year momentum; the VAE does no better than PCA. The PCA portfolio with delta-hedged short calls and a put-spread collar returns 6.28% a year against 3.09% for the HSI total return (information ratio 0.46), but neither the active return nor the gain from the derivatives is significant.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/hsi-path-embeddings/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/hsi-path-embeddings">Code</a></p>
+
+</li>
+
+<li class="proj" data-kind="independent">
+<h2 class="proj-title">Did Liquidity Govern Stablecoin Peg Pass-Through? Evidence from the March 2023 USDC Depeg</h2>
+<p class="proj-meta"><span class="proj-date">Jul 2026</span><span class="sep">·</span><span class="kind kind-independent">Independent</span><span class="sep">·</span><span class="proj-detail">IAQF 2026</span><span class="sep">·</span><span class="proj-rev">first version Feb 2026</span></p>
+<p class="proj-q">Did liquidity govern how peg stress passed through to Bitcoin's price during the March 2023 USDC depeg, with the cross-currency basis on 1-minute Binance.US data split into peg and triangular arbitrage deviations?</p>
+<p class="proj-finding">Liquidity did not measurably govern the pass-through: the USDC/USD illiquidity effect was significant at 1-minute sampling but weakened at 5-minute sampling. The peg deviation carried almost the entire variance of the basis, and the arbitrage deviation closed with a half-life below 1 minute, against about 1 hour for the USDC peg and over 2.5 hours for USDT, so the stress that reached Bitcoin's price was the peg itself, not a failure of arbitrage.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/stablecoin-depeg-fragmentation/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/stablecoin-depeg-fragmentation">Code</a></p>
+
+</li>
+
+<li class="proj" data-kind="course">
+<h2 class="proj-title">Multi-Asset Quanto Pricing via C++ and Python Interface</h2>
+<p class="proj-meta"><span class="proj-date">Apr 2026</span><span class="sep">·</span><span class="kind kind-course">Group course project</span><span class="sep">·</span><span class="proj-detail">QFGB 8960, Fordham, with Alex Wong</span></p>
+<p class="proj-q">How do the asset–FX and asset–asset correlations move the prices of quanto options, basket calls and worst-of digitals, computed in closed form, by Monte Carlo and by finite-difference PDE in a C++ library with a Python interface?</p>
+<p class="proj-finding">The three methods agree within their numerical error and satisfy put–call parity. The asset–FX correlation enters only through the drift: a higher correlation raises calls and lowers puts. A quanto basket call is cheaper than the weighted average of its component calls, and both basket calls and worst-of digital calls become more expensive as the assets become more correlated.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/qflib-quanto/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/qflib-quanto">Code</a></p>
+
+</li>
+
+<li class="proj" data-kind="course">
+<h2 class="proj-title">Covariance Estimators and Out-of-Sample Hedging of SOFR Swap Risk</h2>
+<p class="proj-meta"><span class="proj-date">Mar 2026</span><span class="sep">·</span><span class="kind kind-course">Course project</span><span class="sep">·</span><span class="proj-detail">QFGB 8934, Fordham</span></p>
+<p class="proj-q">Does the choice of covariance estimator (equal-weighted, Ledoit–Wolf and OAS shrinkage, or exponential weighting) change out-of-sample hedge performance and risk forecasts of a 14-tenor SOFR swap portfolio in 2025?</p>
+<p class="proj-finding">No estimator improves hedging consistently: shrinkage leaves principal-component hedges unchanged and worsens up to 38 of 79 two-swap minimum-variance hedges, while exponential weighting improves 36 or 37 of the 79 two-swap principal-component hedges. The estimator matters for the risk forecast: exponential weighting with a decay factor of 0.94 shows no significant bias, equal weighting overstates unhedged risk as volatility falls, and shrinkage overstates hedged residual risk by a factor of 2.5 to 4.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/sofr-swap-hedging/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/sofr-swap-hedging">Code</a></p>
+
+</li>
+
+<li class="proj" data-kind="course">
+<h2 class="proj-title">Knowledge Graphs of Bank Volatility in the COVID-19 Crisis</h2>
+<p class="proj-meta"><span class="proj-date">Mar 2026</span><span class="sep">·</span><span class="kind kind-course">Course project</span><span class="sep">·</span><span class="proj-detail">QFGB 890P, Fordham</span></p>
+<p class="proj-q">How connected does the volatility of 70 US-listed banks become in the COVID-19 crisis, in the knowledge graph of Chen and Zhang (2024) estimated by graphical LASSO?</p>
+<p class="proj-finding">The crisis graph is dense only in weak links: at a cut-off of 0.035 on the absolute partial correlation, none of the 25 largest banks is isolated, but at 0.050 the crisis graph has 8 edges against 84 in the non-crisis graph.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/bank-vol-knowledge-graph/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/bank-vol-knowledge-graph">Code</a></p>
+
+</li>
+
+<li class="proj" data-kind="course">
+<h2 class="proj-title">Swarm Velocity Dynamics in US Sector ETFs</h2>
+<p class="proj-meta"><span class="proj-date">Feb 2026</span><span class="sep">·</span><span class="kind kind-course">Course project</span><span class="sep">·</span><span class="proj-detail">QFGB 890P, Fordham</span></p>
+<p class="proj-q">Does the leader-following swarm velocity of Chen, Huang and Tang (2025), the speed at which each asset closes its gap to the leader, carry tradable information in the eleven Select Sector SPDR ETFs?</p>
+<p class="proj-finding">The velocity filters out unprofitable trades but offers no standalone tradable edge: the fast-minus-slow velocity sort returns 18.1% from October 2018 to December 2025 (Sharpe ratio 0.33), against 94.5% (0.65) for an equally weighted portfolio. Because the sectors are highly correlated, the estimated speed is negative, the reverse of the positive speeds Chen, Huang and Tang report.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/swarm-velocity/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/swarm-velocity">Code</a></p>
+
+</li>
+
+<li class="proj" data-kind="independent">
+<h2 class="proj-title">Seasonality Anomalies in the US Equity Market</h2>
+<p class="proj-meta"><span class="proj-date">Jun 2025</span><span class="sep">·</span><span class="kind kind-independent">Independent</span><span class="sep">·</span><span class="proj-rev">first version Oct 2023</span></p>
+<p class="proj-q">How strong is monthly and daily calendar seasonality in the S&amp;P 500 from 1981 to 2023, and do the Halloween and turn-of-month strategies beat buy and hold?</p>
+<p class="proj-finding">November to April exceeds May to October by 0.81% a month, driven mainly by a weak September and a strong year-end. The combined Halloween and turn-of-month strategy matches buy and hold with dividends in return, volatility and Sharpe ratio (0.377 against 0.376), with a maximum drawdown 7% shallower. Its rolling outperformance declines over time and is not significant.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/seasonal-anomalies/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/seasonal-anomalies">Code</a></p>
+
+</li>
+
+<li class="proj" data-kind="independent">
+<h2 class="proj-title">Do Trump's Tweets Spur Market Volatility?</h2>
+<p class="proj-meta"><span class="proj-date">Aug 2024</span><span class="sep">·</span><span class="kind kind-independent">Independent</span></p>
+<p class="proj-q">Are Donald Trump's tweets, scored for sentiment by VADER and assigned topics by BERTopic, associated with daily changes in the VIX from January 2016 to January 2021?</p>
+<p class="proj-finding">In the session that first reflects a tweet of extreme sentiment, the log change in the VIX is 0.95% higher (about 0.14 index points, significant at 5%), and the difference does not extend to later sessions. The coronavirus tweets came after the VIX had risen and the election-fraud tweets as it fell, consistent with tweets that comment on news rather than create it.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/trump-tweets-volatility/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/trump-tweets-volatility">Code</a></p>
+
+</li>
+
+<li class="proj" data-kind="independent">
+<h2 class="proj-title">Does the Distance Approach to Pairs Trading Survive in the Modern Era?</h2>
+<p class="proj-meta"><span class="proj-date">Jun 2024</span><span class="sep">·</span><span class="kind kind-independent">Independent</span></p>
+<p class="proj-q">Does the distance approach to pairs trading of Gatev, Goetzmann and Rouwenhorst (2006) remain profitable for US large caps from June 2014 to May 2024, net of costs?</p>
+<p class="proj-finding">None of the six portfolios (three distances, each ranked by distance alone or by a composite score) earns a significant return, with mean returns between −0.79% and 0.44% a year, and outside the COVID half-year (December 2019 to May 2020) all six lose money. Only 36% to 41% of trades converge within their six-month window.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/distance-pairs-modern/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/distance-pairs-modern">Code</a></p>
+
+</li>
+
+<li class="proj" data-kind="course">
+<h2 class="proj-title">A Comparison of Neural Architectures for Movie Poster Genre Classification</h2>
+<p class="proj-meta"><span class="proj-date">May 2024</span><span class="sep">·</span><span class="kind kind-course">Group course project</span><span class="sep">·</span><span class="proj-detail">STAT 4012, CUHK, six members</span></p>
+<p class="proj-q">How well do convolutional, transfer-learned and vision-language models classify a film's genre from its poster?</p>
+<p class="proj-finding">ResNets deliver the strongest results, 54.5% accuracy on 19 genres and 69.7% on 3: a poster carries enough genre signal to be worth modeling but not enough for a reliable label. Adding the release decade as an input raises the accuracy by about 4%.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/film-genre-classification/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/film-genre-classification">Code</a></p>
+
+</li>
+
+<li class="proj" data-kind="course">
+<h2 class="proj-title">Confidence-Weighted Pair Trading via DCC-eGARCH</h2>
+<p class="proj-meta"><span class="proj-date">Apr 2024</span><span class="sep">·</span><span class="kind kind-course">Group course project</span><span class="sep">·</span><span class="proj-detail">FINA 4380, CUHK, four members</span></p>
+<p class="proj-q">In cointegration pair trading on 45 US equities and ETFs from August 2021 to December 2023, do optimized thresholds and a confidence weight from the rolling cointegration statistic and DCC-eGARCH forecast volatility improve performance?</p>
+<p class="proj-finding">Optimized thresholds alone lower the Sharpe ratio from 1.32 to 1.17. Combined with the confidence weight they give the highest total return, the lowest drawdown and the highest Sharpe ratio, 1.43.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/confidence-pair-trading/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/confidence-pair-trading">Code</a></p>
+
+</li>
+
+<li class="proj" data-kind="course">
+<h2 class="proj-title">Principal Components of US Sector Prices and Macroeconomic Data</h2>
+<p class="proj-meta"><span class="proj-date">Dec 2023</span><span class="sep">·</span><span class="kind kind-course">Group course project</span><span class="sep">·</span><span class="proj-detail">RMSC 4002, CUHK, six members</span></p>
+<p class="proj-q">What do the principal components of ten US macroeconomic indicators and eleven sector ETFs describe, and how well do the sector components explain the daily S&amp;P 500 return?</p>
+<p class="proj-finding">Two components summarize each dataset: inflation moving with consumption and a wage–production contrast explain 78.26% of the macroeconomic variance, and a market-wide and an energy factor 93.62% of the sector price variance. A regression on the first two sector-return components explains 97.14% of the variance of the S&amp;P 500 return in the training sample and has a lower test-sample error than one component (RMSE 0.206% against 0.266%).</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/sector-macro-pca/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/sector-macro-pca">Code</a></p>
+
+</li>
+
+<li class="proj" data-kind="course">
+<h2 class="proj-title">Calibrating the Coupon Strike of an Autocallable Note under Local Volatility</h2>
+<p class="proj-meta"><span class="proj-date">Dec 2023</span><span class="sep">·</span><span class="kind kind-course">Group course project</span><span class="sep">·</span><span class="proj-detail">FINA 4150, CUHK, three members</span></p>
+<p class="proj-q">Which coupon strike gives a two-year worst-of autocallable note on the Nikkei 225, the S&amp;P 500 and the Hang Seng Index a price of 98% of issue, by Monte Carlo under a Dupire local volatility surface?</p>
+<p class="proj-finding">At the contractual coupon rates of 2% and 0.01%, no strike does: with coupons well below the two-year USD rate of 4.83%, the note is worth less than 98% of issue at any strike. With the two rates free, the required coupon strike rises with both.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/autocallable-local-vol/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/autocallable-local-vol">Code</a></p>
+
+</li>
+
+</ol>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+<script>
+(function () {
+  var buttons = document.querySelectorAll('.proj-filter button');
+  var rows = document.querySelectorAll('.proj');
+  function count(kind) {
+    var n = 0;
+    rows.forEach(function (r) { if (!r.classList.contains('is-held') && (kind === 'all' || r.dataset.kind === kind)) n++; });
+    return n;
+  }
+  buttons.forEach(function (b) {
+    b.querySelector('.n').textContent = count(b.dataset.filter);
+    b.addEventListener('click', function () {
+      var k = b.dataset.filter;
+      buttons.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      rows.forEach(function (r) { r.hidden = !(k === 'all' || r.dataset.kind === k); });
+    });
+  });
+})();
+</script>
+
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <span>Last updated 25 October 2026</span>
+    <a href="https://github.com/Softpandaa/softpandaa.github.io">Site source on GitHub</a>
+  </div>
+</footer>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+    tabsets.forEach(function(tabset) {
+      const tabby = new Tabby('#' + tabset.id);
+    });
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/softpandaa\.github\.io");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+
+
+
+
+</body></html>
