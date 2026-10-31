@@ -7,7 +7,7 @@
 
 :root {
   color-scheme: light;
-  --paper: #fafaf7;           /* always light, near-white (Samson, 28 Oct 2026) */
+  --paper: #fcfbf8;           /* always light, option A (Samson, 31 Oct 2026) */
   --ink: #1d1b29;
   --ink-2: #44414f;
   --muted: #6c6878;
