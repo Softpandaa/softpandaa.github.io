@@ -49,9 +49,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-id','listing-title','listing-date','listing-sortdate','listing-revised','listing-type','listing-question','listing-finding','listing-repo','listing-report','listing-detail',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      valueNames: ['listing-id','listing-title','listing-date','listing-sortdate','listing-revised','listing-type','listing-question','listing-finding','listing-repo','listing-report','listing-label','listing-detail',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
       
-      searchColumns: ["listing-id","listing-title","listing-date","listing-sortdate","listing-revised","listing-type","listing-question","listing-finding","listing-repo","listing-report","listing-detail"],
+      searchColumns: ["listing-id","listing-title","listing-date","listing-sortdate","listing-revised","listing-type","listing-question","listing-finding","listing-repo","listing-report","listing-label","listing-detail"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -148,17 +148,6 @@ window.Quarto = {
 
 <section id="projects" class="page-head">
 <h1>Projects</h1>
-<div class="proj-filter" role="group" aria-label="Show projects by type">
-<button type="button" data-filter="all" aria-pressed="true">
-All <span class="n"></span>
-</button>
-<button type="button" data-filter="independent" aria-pressed="false">
-Independent <span class="n"></span>
-</button>
-<button type="button" data-filter="course" aria-pressed="false">
-Course <span class="n"></span>
-</button>
-</div>
 </section>
 <div id="listing-projects" class="quarto-listing quarto-listing-container-custom">
 <ol class="proj-list">
@@ -178,6 +167,24 @@ Course <span class="n"></span>
 <p class="proj-q">Does cointegration-based pair formation in the S&amp;P 500 remain profitable out of sample from 2010 to 2025, and does it depend on the formation method, the stock grouping or the window length?</p>
 <p class="proj-finding">No formation choice is consistently profitable: in the 2020–2025 testing period, the top-decile spreads of every method, those with the strongest formation evidence against a random-walk null, lose 0.70% to 1.34% a year after trading and borrowing costs, and their mean reversion persists little longer than that of spreads formed on random walks.</p>
 <p class="proj-links"><a class="btn" href="https://softpandaa.github.io/cointegration-pairs-modern/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/cointegration-pairs-modern">Code</a></p>
+
+</li>
+
+<li class="proj" data-kind="independent">
+<h2 class="proj-title">Efficiency Loss of Sequential Quasi-Maximum Likelihood Estimation in the AR(p)-EGARCH(1,1) Model</h2>
+<p class="proj-meta"><span class="proj-date">Oct 2026</span><span class="sep">·</span><span class="kind kind-independent">Independent</span></p>
+<p class="proj-q">How much efficiency does fitting the AR(p) mean first and the EGARCH(1,1) variance second lose against joint Gaussian quasi-maximum likelihood estimation, in theory, in a Monte Carlo study and on daily S&amp;P 500 returns from January 1970 to August 2026?</p>
+<p class="proj-finding">Block diagonality of the information matrix fails even without a leverage effect, through a single entry linking the mean return to the coefficient on the lagged innovation. With leverage, the two-step estimator also loses efficiency for the intercept and persistence of the log variance; the loss is largest for the unconditional mean of the log variance, about 15% in the Monte Carlo base design and 17% to 21% at the S&amp;P 500 estimate. Refitting the mean by feasible generalized least squares recovers most of the efficiency for the mean parameters.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/ar-egarch-sequential-qmle/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/ar-egarch-sequential-qmle">Code</a></p>
+
+</li>
+
+<li class="proj" data-kind="independent">
+<h2 class="proj-title">An Introduction to AR-EGARCH Models and Quasi-Maximum Likelihood Estimation</h2>
+<p class="proj-meta"><span class="proj-date">Sep 2026</span><span class="sep">·</span><span class="kind kind-independent">Independent</span></p>
+<p class="proj-q">What do AR-EGARCH models and Gaussian quasi-maximum likelihood estimation assume, and when is estimating the mean and the variance in sequence as efficient as estimating them jointly?</p>
+<p class="proj-finding">Covering stationarity, autoregressions, the stylized facts of returns, GARCH, EGARCH and QMLE, the note shows that sequential estimation is as efficient as joint estimation when the information matrix is block diagonal, as in ARMA-GARCH models with symmetric innovations. EGARCH breaks this even without leverage, which motivates the accompanying study.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/ar-egarch-sequential-qmle/notes.pdf">Note (PDF)</a><a class="btn" href="https://github.com/Softpandaa/ar-egarch-sequential-qmle">Code</a></p>
 
 </li>
 
@@ -301,25 +308,6 @@ Course <span class="n"></span>
 </ol>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
-<script>
-(function () {
-  var buttons = document.querySelectorAll('.proj-filter button');
-  var rows = document.querySelectorAll('.proj');
-  function count(kind) {
-    var n = 0;
-    rows.forEach(function (r) { if (!r.classList.contains('is-held') && (kind === 'all' || r.dataset.kind === kind)) n++; });
-    return n;
-  }
-  buttons.forEach(function (b) {
-    b.querySelector('.n').textContent = count(b.dataset.filter);
-    b.addEventListener('click', function () {
-      var k = b.dataset.filter;
-      buttons.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
-      rows.forEach(function (r) { r.hidden = !(k === 'all' || r.dataset.kind === k); });
-    });
-  });
-})();
-</script>
 
 
 
