@@ -129,7 +129,7 @@ main.page { padding-block: 3rem 0; }
 .school { color: var(--ink-2); }
 .when { color: var(--muted); font-size: 0.875rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .honours { color: var(--muted); font-size: 0.9rem; }
-.minors { color: var(--ink); font-weight: 500; font-size: 0.92rem; }   /* minors on their own line, highlighted (Samson, 6 Nov 2026) */
+.minors { color: var(--ink); font-size: 0.92rem; }   /* minors on their own line, not bold (Samson, 6 Nov 2026) */
 .awards ul { list-style: none; padding-left: 0; margin-top: 0.4rem; display: grid; gap: 0.25rem; font-size: 0.9rem; color: var(--ink-2); }
 .awards li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0 1rem; align-items: baseline; }
 
