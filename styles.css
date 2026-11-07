@@ -114,8 +114,7 @@ main.page { padding-block: 3rem 0; }
 .bio { display: grid; gap: 0.8rem; font-size: 1.05rem; line-height: 1.7; }
 .bio p { max-width: 36rem; }
 .personal { color: var(--ink-2); }
-.links { display: flex; flex-wrap: wrap; gap: 0.35rem 1.1rem; font-size: 0.95rem; align-items: baseline; }
-.links p { display: contents; }
+.links { font-size: 0.95rem; }   /* one sentence with the GitHub link (Samson, 7 Nov 2026) */
 
 .photo {
   width: 100%; aspect-ratio: 4 / 5; max-width: 100%;
