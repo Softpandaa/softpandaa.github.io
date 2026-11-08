@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Independent and course projects by Samson Lam, each with its report and code.">
 
 <title>Projects</title>
 <style>
@@ -30,6 +31,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
+<link href="./assets/img/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-listing/list.min.js"></script>
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script>
@@ -65,6 +67,12 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Projects">
+<meta property="og:description" content="Independent and course projects by Samson Lam, each with its report and code.">
+<meta property="og:site_name" content="Samson Lam">
+<meta name="twitter:title" content="Projects">
+<meta name="twitter:description" content="Independent and course projects by Samson Lam, each with its report and code.">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body>
@@ -83,10 +91,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 <script>
 (function () {
-  var f = location.pathname.split('/').pop();
+  var f = location.pathname.split('/').pop().replace(/\.html$/, '') || 'index';   // GitHub Pages also serves /projects etc. (8 Nov 2026)
   var links = document.querySelectorAll('.site-nav a');
   var hit = null;
-  links.forEach(function (a) { if (a.getAttribute('href') === f) hit = a; });
+  links.forEach(function (a) { if (a.getAttribute('href').replace(/\.html$/, '') === f) hit = a; });
   if (!hit) hit = links[0];
   hit.setAttribute('aria-current', 'page');
 })();
@@ -105,120 +113,120 @@ ul.task-list li input[type="checkbox"] {
 <li class="proj">
 <h2 class="proj-title">Efficiency Loss of Sequential Quasi-Maximum Likelihood Estimation in the AR(p)-EGARCH(1,1) Model</h2>
 <p class="proj-meta"><span class="proj-date">Oct 2026</span><span class="sep">·</span><span class="kind kind-independent">Independent</span></p>
-<p class="proj-finding">This study examines which parameters of the AR(p)-EGARCH(1,1) model are estimated less efficiently by sequential than by joint Gaussian quasi-maximum likelihood estimation, using theory, Monte Carlo simulation and daily S&amp;P 500 returns from 1970 to 2026. Even without a leverage effect, the sequential estimator loses efficiency for the coefficient on the lagged innovation when the mean return is estimated. With leverage, the loss extends to the intercept and persistence of the log variance and is largest for the mean log variance, at about 15% in simulation. A 3-step estimator that refits the mean by feasible generalized least squares recovers most of the efficiency for the mean parameters.</p>
-<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/ar-egarch-sequential-qmle/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/ar-egarch-sequential-qmle">Code</a></p>
+<p class="proj-finding">This study examines which parameters of the AR(p)-EGARCH(1,1) model are estimated less efficiently by sequential than by joint Gaussian quasi-maximum likelihood estimation. Even without a leverage effect, the sequential estimator loses efficiency for the coefficient on the lagged innovation when the mean return is estimated and the innovation kurtosis is below an explicit threshold. With leverage, the loss extends to the intercept and persistence of the log variance and is largest for the mean log variance, whose asymptotic variance rises by about 15% in the base simulation design and by 17% to 21% at the S&amp;P 500 estimate. A three-step estimator that refits the mean by feasible generalized least squares recovers most of the efficiency for the mean parameters.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/ar-egarch-sequential-qmle/report.pdf">Report (PDF)<span class="vh"> of Efficiency Loss of Sequential Quasi-Maximum Likelihood Estimation in the AR(p)-EGARCH(1,1) Model, opens in a new tab</span></a><a class="btn" href="https://github.com/Softpandaa/ar-egarch-sequential-qmle">Code<span class="vh"> for Efficiency Loss of Sequential Quasi-Maximum Likelihood Estimation in the AR(p)-EGARCH(1,1) Model, opens in a new tab</span></a></p>
 </li>
 
 <li class="proj">
 <h2 class="proj-title">An Introduction to AR-EGARCH Models and Quasi-Maximum Likelihood Estimation</h2>
 <p class="proj-meta"><span class="proj-date">Sep 2026</span><span class="sep">·</span><span class="kind kind-independent">Independent</span></p>
-<p class="proj-finding">This note introduces AR-EGARCH models and Gaussian quasi-maximum likelihood estimation, from time series foundations and the stylized facts of asset returns to volatility filtering and forecast evaluation. It explains why sequential estimation of the variance parameters is as efficient as joint estimation when the information matrix is block diagonal, as in ARMA models with GARCH errors and symmetric innovations. EGARCH breaks this block diagonality even without a leverage effect, which motivates the accompanying efficiency study.</p>
-<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/ar-egarch-sequential-qmle/notes.pdf">Note (PDF)</a><a class="btn" href="https://github.com/Softpandaa/ar-egarch-sequential-qmle">Code</a></p>
+<p class="proj-finding">This note introduces AR-EGARCH models and Gaussian quasi-maximum likelihood estimation, from time series foundations and the stylized facts of asset returns to volatility filtering and forecast evaluation. It explains why sequential estimation of the variance parameters is as efficient as joint estimation when the information matrix is block diagonal, as in ARMA models with GARCH errors and symmetric innovations. Even without a leverage effect, EGARCH lacks the symmetry that guarantees this block diagonality, which motivates the accompanying efficiency study.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/ar-egarch-sequential-qmle/notes.pdf">Note (PDF)<span class="vh"> of An Introduction to AR-EGARCH Models and Quasi-Maximum Likelihood Estimation, opens in a new tab</span></a><a class="btn" href="https://github.com/Softpandaa/ar-egarch-sequential-qmle">Code<span class="vh"> for An Introduction to AR-EGARCH Models and Quasi-Maximum Likelihood Estimation, opens in a new tab</span></a></p>
 </li>
 
 <li class="proj">
 <h2 class="proj-title">Bayesian Evidence on the Random Walk in Intraday Price Paths</h2>
 <p class="proj-meta"><span class="proj-date">Oct 2026</span><span class="sep">·</span><span class="kind kind-independent">Independent</span><span class="sep">·</span><span class="proj-rev">first version Jul 2024</span></p>
-<p class="proj-finding">This study examines 5-hour price trajectories of E-mini S&amp;P 500 futures, EUR/USD and Bitcoin from 2024 to 2026 using Bayes factors to test the random walk hypothesis. For EUR/USD and Bitcoin, Bayes factors favor the random walk, though much of this support comes from the prior. The E-mini S&amp;P 500 futures show only weak evidence against the random walk.</p>
-<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/bayesian-intraday-random-walk/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/bayesian-intraday-random-walk">Code</a></p>
+<p class="proj-finding">This study examines 5-hour price trajectories of E-mini S&amp;P 500 futures, EUR/USD and Bitcoin from 2024 to 2026 using Bayes factors to test the random walk hypothesis. For EUR/USD and Bitcoin, Bayes factors favor the random walk, though the strength of this evidence depends largely on the prior. The E-mini S&amp;P 500 futures show only weak evidence against the random walk.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/bayesian-intraday-random-walk/report.pdf">Report (PDF)<span class="vh"> of Bayesian Evidence on the Random Walk in Intraday Price Paths, opens in a new tab</span></a><a class="btn" href="https://github.com/Softpandaa/bayesian-intraday-random-walk">Code<span class="vh"> for Bayesian Evidence on the Random Walk in Intraday Price Paths, opens in a new tab</span></a></p>
 </li>
 
 <li class="proj">
 <h2 class="proj-title">Covariance Estimators and Out-of-Sample Hedging of SOFR Swap Risk</h2>
 <p class="proj-meta"><span class="proj-date">Mar 2026</span><span class="sep">·</span><span class="kind kind-course">Course project</span><span class="sep">·</span><span class="proj-detail">QFGB 8934, Fordham</span></p>
-<p class="proj-finding">This project examines whether the covariance estimator changes the out-of-sample hedging and risk forecasting of a SOFR swap portfolio in 2025. A DV01 profile over 14 tenors is hedged with one or two swaps under equal-weighted, Ledoit–Wolf and oracle approximating shrinkage estimators and exponential weighting. No estimator improves hedging consistently, but the choice matters for the risk forecast. Shrinkage overstates the variance of hedged portfolios by a factor of 2.5 to 4.</p>
-<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/sofr-swap-hedging/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/sofr-swap-hedging">Code</a></p>
+<p class="proj-finding">For a SOFR swap portfolio in 2025, this project asks whether the covariance estimator changes out-of-sample hedging and risk forecasting. A DV01 profile over 14 tenors is hedged with one or two swaps under five covariance estimators: the equal-weighted sample covariance, Ledoit–Wolf shrinkage, oracle approximating shrinkage and exponential weighting at two decay factors. No estimator improves hedging consistently in Diebold–Mariano tests with Newey–West standard errors, but the choice matters for the risk forecast. Shrinkage overstates the variance of hedged portfolios by a factor of 2.5 to 4, because shrinking toward a scaled identity inflates the small variance left after hedging.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/sofr-swap-hedging/report.pdf">Report (PDF)<span class="vh"> of Covariance Estimators and Out-of-Sample Hedging of SOFR Swap Risk, opens in a new tab</span></a><a class="btn" href="https://github.com/Softpandaa/sofr-swap-hedging">Code<span class="vh"> for Covariance Estimators and Out-of-Sample Hedging of SOFR Swap Risk, opens in a new tab</span></a></p>
 </li>
 
 <li class="proj">
 <h2 class="proj-title">Did Liquidity Govern Stablecoin Peg Pass-Through? Evidence from the March 2023 USDC Depeg</h2>
-<p class="proj-meta"><span class="proj-date">Jul 2026</span><span class="sep">·</span><span class="kind kind-independent">Independent</span><span class="sep">·</span><span class="proj-detail">IAQF 2026</span><span class="sep">·</span><span class="proj-rev">first version Feb 2026</span></p>
-<p class="proj-finding">This study decomposes each stablecoin's cross-currency basis into a peg deviation and a triangular arbitrage deviation using 1-minute Binance.US prices of Bitcoin, USDT and USDC. A pass-through regression then tests whether lagged illiquidity changes how the arbitrage deviation responds to the peg deviation. Results show that liquidity did not measurably govern the pass-through during the March 2023 USDC depeg. Instead, the stress that reached Bitcoin's stablecoin price was the peg deviation itself rather than a failure of arbitrage.</p>
-<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/stablecoin-depeg-fragmentation/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/stablecoin-depeg-fragmentation">Code</a></p>
+<p class="proj-meta"><span class="proj-date">Jul 2026</span><span class="sep">·</span><span class="kind kind-independent">Independent</span><span class="sep">·</span><span class="proj-rev">first version Feb 2026</span></p>
+<p class="proj-finding">This study decomposes each stablecoin's cross-currency basis into a peg deviation and a triangular arbitrage deviation using 1-minute Binance.US prices of Bitcoin, USDT and USDC. A pass-through regression then tests whether lagged illiquidity changes how the arbitrage deviation responds to the peg deviation. Results show that liquidity did not measurably govern the pass-through during the March 2023 USDC depeg. Instead, the stress that reached Bitcoin's stablecoin price was the peg deviation itself rather than a failure of arbitrage. (A revision of an IAQF 2026 Student Competition entry.)</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/stablecoin-depeg-fragmentation/report.pdf">Report (PDF)<span class="vh"> of Did Liquidity Govern Stablecoin Peg Pass-Through? Evidence from the March 2023 USDC Depeg, opens in a new tab</span></a><a class="btn" href="https://github.com/Softpandaa/stablecoin-depeg-fragmentation">Code<span class="vh"> for Did Liquidity Govern Stablecoin Peg Pass-Through? Evidence from the March 2023 USDC Depeg, opens in a new tab</span></a></p>
 </li>
 
 <li class="proj">
 <h2 class="proj-title">Do Cointegration-based Pairs Remain Profitable?</h2>
 <p class="proj-meta"><span class="proj-date">Oct 2026</span><span class="sep">·</span><span class="kind kind-independent">Independent</span><span class="sep">·</span><span class="proj-rev">first version Jun 2024</span></p>
 <p class="proj-finding">This study forms S&amp;P 500 spreads within sectors or correlation-based clusters using pairs, Johansen cointegration, principal component analysis, eigenanalysis and stock-versus-group cointegration over 1- to 5-year windows. Out-of-sample results show that none of these formation methods are independently profitable. From 2020 to 2025, the top-decile spreads of all methods incur annual losses of 0.70% to 1.34% after costs.</p>
-<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/cointegration-pairs-modern/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/cointegration-pairs-modern">Code</a></p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/cointegration-pairs-modern/report.pdf">Report (PDF)<span class="vh"> of Do Cointegration-based Pairs Remain Profitable?, opens in a new tab</span></a><a class="btn" href="https://github.com/Softpandaa/cointegration-pairs-modern">Code<span class="vh"> for Do Cointegration-based Pairs Remain Profitable?, opens in a new tab</span></a></p>
 </li>
 
 <li class="proj">
 <h2 class="proj-title">Price Path Embeddings in a Hang Seng Index Portfolio</h2>
 <p class="proj-meta"><span class="proj-date">Aug 2026</span><span class="sep">·</span><span class="kind kind-independent">Independent</span><span class="sep">·</span><span class="proj-rev">first version Nov 2024</span></p>
-<p class="proj-finding">This project utilizes PCA and LSTM variational autoencoder embeddings of each stock's past year to forecast returns for a long-only HSI portfolio. Listed HSI derivatives are incorporated through delta-hedged short calls and a conditional put-spread collar. While the return forecast is statistically significant, it primarily captures past-year momentum. The VAE performs similarly to PCA, and the portfolio's advantage over the HSI total return is not statistically significant.</p>
-<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/hsi-path-embeddings/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/hsi-path-embeddings">Code</a></p>
+<p class="proj-finding">This project utilizes PCA and LSTM variational autoencoder (VAE) embeddings of each stock's past year to forecast returns for a long-only HSI portfolio. Listed HSI derivatives are incorporated through delta-hedged short calls and a conditional put-spread collar. While the return forecast is statistically significant, it primarily captures past-year momentum. The VAE performs similarly to PCA, and the portfolio's advantage over the HSI total return is not statistically significant.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/hsi-path-embeddings/report.pdf">Report (PDF)<span class="vh"> of Price Path Embeddings in a Hang Seng Index Portfolio, opens in a new tab</span></a><a class="btn" href="https://github.com/Softpandaa/hsi-path-embeddings">Code<span class="vh"> for Price Path Embeddings in a Hang Seng Index Portfolio, opens in a new tab</span></a></p>
 </li>
 
 <li class="proj">
 <h2 class="proj-title">Multi-Asset Quanto Pricing via C++ and Python Interface</h2>
 <p class="proj-meta"><span class="proj-date">Apr 2026</span><span class="sep">·</span><span class="kind kind-course">Group course project</span><span class="sep">·</span><span class="proj-detail">QFGB 8960, Fordham, with Alex Wong</span></p>
 <p class="proj-finding">We extend qflib, a C++ library with a Python interface, to price European quanto options in closed form, by Monte Carlo simulation and by a finite-difference PDE scheme. Since the asset–FX correlation enters through the drift, a higher correlation raises call prices and lowers put prices. Quanto basket calls and worst-of digital calls, priced by Monte Carlo, both become more expensive as the assets become more correlated.</p>
-<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/qflib-quanto/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/qflib-quanto">Code</a></p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/qflib-quanto/report.pdf">Report (PDF)<span class="vh"> of Multi-Asset Quanto Pricing via C++ and Python Interface, opens in a new tab</span></a><a class="btn" href="https://github.com/Softpandaa/qflib-quanto">Code<span class="vh"> for Multi-Asset Quanto Pricing via C++ and Python Interface, opens in a new tab</span></a></p>
 </li>
 
 <li class="proj">
 <h2 class="proj-title">Knowledge Graphs of Bank Volatility in the COVID-19 Crisis</h2>
 <p class="proj-meta"><span class="proj-date">Mar 2026</span><span class="sep">·</span><span class="kind kind-course">Course project</span><span class="sep">·</span><span class="proj-detail">QFGB 890P, Fordham</span></p>
-<p class="proj-finding">Building on the knowledge graph approach of Chen and Zhang (2024), this study investigates whether the volatilities of 70 US-listed banks were more interconnected during the COVID-19 crisis compared to non-crisis periods. Edges are established when the graphical lasso partial correlation surpasses a uniform threshold. The crisis network is denser than the non-crisis network only at low partial correlations. Above a cut-off of 0.040, the non-crisis network becomes denser.</p>
-<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/bank-vol-knowledge-graph/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/bank-vol-knowledge-graph">Code</a></p>
+<p class="proj-finding">Building on the knowledge graph approach of Chen and Zhang (2024), this study investigates whether the volatilities of 70 US-listed banks were more interconnected during the COVID-19 crisis than in non-crisis periods. Edges among the 25 largest of them are established when the graphical lasso partial correlation surpasses a uniform threshold. The crisis network is denser than the non-crisis network only at low partial correlations. Above a cutoff of 0.040, the non-crisis network becomes denser.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/bank-vol-knowledge-graph/report.pdf">Report (PDF)<span class="vh"> of Knowledge Graphs of Bank Volatility in the COVID-19 Crisis, opens in a new tab</span></a><a class="btn" href="https://github.com/Softpandaa/bank-vol-knowledge-graph">Code<span class="vh"> for Knowledge Graphs of Bank Volatility in the COVID-19 Crisis, opens in a new tab</span></a></p>
 </li>
 
 <li class="proj">
 <h2 class="proj-title">Seasonality Anomalies in the US Equity Market</h2>
 <p class="proj-meta"><span class="proj-date">Jun 2025</span><span class="sep">·</span><span class="kind kind-independent">Independent</span><span class="sep">·</span><span class="proj-rev">first version Oct 2023</span></p>
 <p class="proj-finding">Using S&amp;P 500 data from 1981 to 2023, this project examines what remains of monthly and daily calendar seasonality and whether the Halloween and turn-of-month effects still pay as trading strategies. November to April outperforms May to October by a statistically significant 0.81% a month, driven by a weak September and a strong year end. A combined Halloween and turn-of-month strategy slightly outperforms buy and hold, although the lead is not statistically significant.</p>
-<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/seasonal-anomalies/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/seasonal-anomalies">Code</a></p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/seasonal-anomalies/report.pdf">Report (PDF)<span class="vh"> of Seasonality Anomalies in the US Equity Market, opens in a new tab</span></a><a class="btn" href="https://github.com/Softpandaa/seasonal-anomalies">Code<span class="vh"> for Seasonality Anomalies in the US Equity Market, opens in a new tab</span></a></p>
 </li>
 
 <li class="proj">
 <h2 class="proj-title">Do Trump's Tweets Spur Market Volatility?</h2>
 <p class="proj-meta"><span class="proj-date">Aug 2024</span><span class="sep">·</span><span class="kind kind-independent">Independent</span></p>
-<p class="proj-finding">This study examines the daily association between Donald Trump's tweets and the CBOE Volatility Index (VIX) from January 2016 to January 2021. Each tweet is assigned a topic with BERTopic and scored for sentiment with VADER, and an event regression relates the daily log change in the VIX around each tweet to its topic and sentiment. Tweets on election fraud carry negative coefficients, as the VIX fell after the November 2020 election, while neither the coronavirus nor the China trade topic is statistically significant at any horizon. Most coronavirus tweets came after the VIX had peaked in March 2020, consistent with tweets that comment on news rather than create it.</p>
-<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/trump-tweets-volatility/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/trump-tweets-volatility">Code</a></p>
+<p class="proj-finding">From January 2016 to January 2021, this study measures the daily association between Donald Trump's tweets and the CBOE Volatility Index (VIX). Each tweet is assigned a topic with BERTopic and scored for sentiment with VADER, and regressions relate the daily log change in the VIX around each tweet session to an indicator of extreme sentiment and to the number of tweets on each topic. Only a few of the 19 topics have significant coefficients. Tweets on election fraud carry negative ones, as the VIX fell after the November 2020 election, while neither the coronavirus nor the China trade topic is significant at the 5% level at any horizon. Most coronavirus tweets came after the VIX had peaked in March 2020, consistent with tweets that comment on news rather than create it.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/trump-tweets-volatility/report.pdf">Report (PDF)<span class="vh"> of Do Trump's Tweets Spur Market Volatility?, opens in a new tab</span></a><a class="btn" href="https://github.com/Softpandaa/trump-tweets-volatility">Code<span class="vh"> for Do Trump's Tweets Spur Market Volatility?, opens in a new tab</span></a></p>
 </li>
 
 <li class="proj">
 <h2 class="proj-title">Does the Distance Approach to Pairs Trading Survive in the Modern Era?</h2>
 <p class="proj-meta"><span class="proj-date">Jun 2024</span><span class="sep">·</span><span class="kind kind-independent">Independent</span></p>
-<p class="proj-finding">Using Euclidean, Manhattan and Chebyshev distances, this project applies the distance approach to pairs trading of Gatev, Goetzmann and Rouwenhorst (2006) to US large caps from June 2014 to May 2024. Pairs are formed within sectors, ranked by distance or by a composite score of zero crossings and spread volatility, and traded over 20 half-years after costs. No portfolio earns a statistically significant return, and outside the COVID half-year from December 2019 to May 2020, every portfolio loses money.</p>
-<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/distance-pairs-modern/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/distance-pairs-modern">Code</a></p>
+<p class="proj-finding">Using Euclidean, Manhattan and Chebyshev distances, this project applies the Gatev, Goetzmann and Rouwenhorst (2006) distance approach to pairs trading in US large caps from June 2014 to May 2024. Pairs are formed within sectors and ranked by distance or by a composite score that adds zero crossings and spread volatility to the distance, then traded over 20 half-years after costs. No portfolio earns a statistically significant return, and outside the COVID half-year from December 2019 to May 2020, every portfolio loses money.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/distance-pairs-modern/report.pdf">Report (PDF)<span class="vh"> of Does the Distance Approach to Pairs Trading Survive in the Modern Era?, opens in a new tab</span></a><a class="btn" href="https://github.com/Softpandaa/distance-pairs-modern">Code<span class="vh"> for Does the Distance Approach to Pairs Trading Survive in the Modern Era?, opens in a new tab</span></a></p>
 </li>
 
 <li class="proj">
 <h2 class="proj-title">Swarm Velocity Dynamics in US Sector ETFs</h2>
 <p class="proj-meta"><span class="proj-date">Feb 2026</span><span class="sep">·</span><span class="kind kind-course">Course project</span><span class="sep">·</span><span class="proj-detail">QFGB 890P, Fordham</span></p>
-<p class="proj-finding">This study examines whether the leader-following swarm velocity of Chen, Huang and Tang (2025) carries tradable information for 11 Select Sector SPDR ETFs at daily frequency. A threshold rule applies the velocity to a leader-versus-loser pair trade, and a cross-sectional rule ranks the ETFs by their own speeds. The velocity threshold cuts transaction costs but does not pick better trades, and an equally weighted portfolio of the same ETFs achieves a higher Sharpe ratio.</p>
-<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/swarm-velocity/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/swarm-velocity">Code</a></p>
+<p class="proj-finding">At daily frequency, this study tests whether the leader-following swarm velocity of Chen, Huang and Tang (2025) carries tradable information for 11 Select Sector SPDR ETFs. A threshold rule applies the velocity to a leader-versus-loser pair trade, and a cross-sectional rule ranks the ETFs by their own speeds. The estimated speeds lie close to the value that returns without leader-following produce, because the gap to the leader is dated on the same day as the velocity. The velocity threshold cuts transaction costs but does not pick better trades, and neither rule earns a significantly positive return.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/swarm-velocity/report.pdf">Report (PDF)<span class="vh"> of Swarm Velocity Dynamics in US Sector ETFs, opens in a new tab</span></a><a class="btn" href="https://github.com/Softpandaa/swarm-velocity">Code<span class="vh"> for Swarm Velocity Dynamics in US Sector ETFs, opens in a new tab</span></a></p>
 </li>
 
 <li class="proj">
 <h2 class="proj-title">Calibrating the Coupon Strike of an Autocallable Note under Local Volatility</h2>
 <p class="proj-meta"><span class="proj-date">Dec 2023</span><span class="sep">·</span><span class="kind kind-course">Group course project</span><span class="sep">·</span><span class="proj-detail">FINA 4150, CUHK, three members</span></p>
 <p class="proj-finding">We price a 2-year worst-of autocallable note on the Nikkei 225, the S&amp;P 500 and the Hang Seng Index by Monte Carlo simulation under a Dupire local volatility surface calibrated to Bloomberg option chains. The note pays a 2% coupon if the worst-performing index meets or exceeds the coupon strike, and only 0.01% otherwise. At these contractual terms, no coupon strike allows the note to price at 98% of its issue price, as the 2% coupon is far below the prevailing 2-year USD discount rate of 4.83%.</p>
-<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/autocallable-local-vol/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/autocallable-local-vol">Code</a></p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/autocallable-local-vol/report.pdf">Report (PDF)<span class="vh"> of Calibrating the Coupon Strike of an Autocallable Note under Local Volatility, opens in a new tab</span></a><a class="btn" href="https://github.com/Softpandaa/autocallable-local-vol">Code<span class="vh"> for Calibrating the Coupon Strike of an Autocallable Note under Local Volatility, opens in a new tab</span></a></p>
 </li>
 
 <li class="proj">
 <h2 class="proj-title">Confidence-Weighted Pairs Trading via DCC-EGARCH</h2>
 <p class="proj-meta"><span class="proj-date">Apr 2024</span><span class="sep">·</span><span class="kind kind-course">Group course project</span><span class="sep">·</span><span class="proj-detail">FINA 4380, CUHK, four members</span></p>
-<p class="proj-finding">In a backtest of US equities and ETFs from August 2021 to December 2023, we evaluate whether individualized entry and exit thresholds and confidence weights enhance a pairs trading portfolio. Pairs are identified using the Engle–Granger cointegration test, hedge ratios are estimated via a Kalman filter, and spread volatility is modeled with a DCC-EGARCH approach. Net of transaction costs, optimized thresholds increase total returns but reduce the Sharpe ratio from 1.32 to 1.17. Confidence weights, calculated from rolling cointegration p-values and forecast volatility, yield the highest Sharpe ratio of 1.43.</p>
-<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/confidence-pair-trading/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/confidence-pair-trading">Code</a></p>
+<p class="proj-finding">In a backtest of US equities and ETFs from August 2021 to December 2023, we evaluate whether individualized entry and exit thresholds and confidence weights enhance a pairs trading portfolio. Pairs are identified using the Engle–Granger cointegration test, with hedge ratios estimated via a Kalman filter and spread volatility modeled with a DCC-EGARCH approach. Net of transaction costs, optimized thresholds increase total returns but reduce the Sharpe ratio from 1.32 to 1.17. Confidence weights, calculated from rolling cointegration p-values and forecast volatility, yield the highest Sharpe ratio of 1.43.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/confidence-pair-trading/report.pdf">Report (PDF)<span class="vh"> of Confidence-Weighted Pairs Trading via DCC-EGARCH, opens in a new tab</span></a><a class="btn" href="https://github.com/Softpandaa/confidence-pair-trading">Code<span class="vh"> for Confidence-Weighted Pairs Trading via DCC-EGARCH, opens in a new tab</span></a></p>
 </li>
 
 <li class="proj">
 <h2 class="proj-title">Principal Components of US Sector Prices and Macroeconomic Data</h2>
 <p class="proj-meta"><span class="proj-date">Dec 2023</span><span class="sep">·</span><span class="kind kind-course">Group course project</span><span class="sep">·</span><span class="proj-detail">RMSC 4002, CUHK, six members</span></p>
-<p class="proj-finding">We apply principal component analysis to determine how many components effectively summarize 10 monthly US macroeconomic indicators and the prices of the 11 Select Sector SPDR ETFs. For each dataset, two principal components suffice: the macroeconomic components capture inflation moving with consumption and wage growth relative to production, while the sector components reflect a broad market factor and an energy-specific factor. We then regress daily S&amp;P 500 log returns on the sector return components from June 2018 to November 2023. The two-component model explains 97.14% of in-sample return variance and outperforms a single-component approach in the testing period.</p>
-<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/sector-macro-pca/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/sector-macro-pca">Code</a></p>
+<p class="proj-finding">We apply principal component analysis to determine how many components effectively summarize 10 monthly US macroeconomic indicators and the prices of the 11 Select Sector SPDR ETFs. For each dataset, two principal components suffice: the first macroeconomic component captures inflation moving with consumption and the second captures wage growth relative to production, while the sector components reflect a broad market factor and an energy-specific factor. We then regress daily S&amp;P 500 log returns on the same-day sector return components from June 2018 to November 2023. The two-component model explains 97.14% of in-sample return variance and outperforms a single-component approach in the testing period.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/sector-macro-pca/report.pdf">Report (PDF)<span class="vh"> of Principal Components of US Sector Prices and Macroeconomic Data, opens in a new tab</span></a><a class="btn" href="https://github.com/Softpandaa/sector-macro-pca">Code<span class="vh"> for Principal Components of US Sector Prices and Macroeconomic Data, opens in a new tab</span></a></p>
 </li>
 
 <li class="proj">
 <h2 class="proj-title">A Comparison of Neural Architectures for Movie Poster Genre Classification</h2>
 <p class="proj-meta"><span class="proj-date">May 2024</span><span class="sep">·</span><span class="kind kind-course">Group course project</span><span class="sep">·</span><span class="proj-detail">STAT 4012, CUHK, six members</span></p>
-<p class="proj-finding">We examine whether the genre of a film can be recovered from its poster alone, and at what computational cost. A convolutional network trained from scratch, four ImageNet backbones and YOLOv8 adapted by transfer learning, and CLIP applied zero-shot are compared with EfficientNetV2 and FastViT, two backbones built for efficient inference. ResNets attain the highest accuracy, at 54.5% on the 19-genre task and 69.7% on the 3-genre task. Supplying the decade as an indicator raises the convolutional network's accuracy by about 4%.</p>
-<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/film-genre-classification/report.pdf">Report (PDF)</a><a class="btn" href="https://github.com/Softpandaa/film-genre-classification">Code</a></p>
+<p class="proj-finding">We examine whether the genre of a film can be recovered from its poster alone, and at what computational cost. VGG16, AlexNet, ResNet-18, ResNet-50 and YOLOv8 are adapted by transfer learning, and CLIP is applied zero-shot. These and a convolutional network trained from scratch are compared with EfficientNetV2 and FastViT, two backbones built for efficient inference. ResNets attain the highest accuracy, at 54.5% on the 19-genre task and 69.7% on the 3-genre task. Supplying the decade as an indicator raises the convolutional network's accuracy by about 4%.</p>
+<p class="proj-links"><a class="btn" href="https://softpandaa.github.io/film-genre-classification/report.pdf">Report (PDF)<span class="vh"> of A Comparison of Neural Architectures for Movie Poster Genre Classification, opens in a new tab</span></a><a class="btn" href="https://github.com/Softpandaa/film-genre-classification">Code<span class="vh"> for A Comparison of Neural Architectures for Movie Poster Genre Classification, opens in a new tab</span></a></p>
 </li>
 
 </ol>
@@ -230,13 +238,10 @@ ul.task-list li input[type="checkbox"] {
 </main>
 <footer class="site-footer">
   <div class="wrap footer-row">
-    <span>Last updated 7 November 2026</span>
-    <a href="https://github.com/Softpandaa/softpandaa.github.io">Site source on GitHub</a>
+    <span>Last updated November 8, 2026</span>
   </div>
 </footer>
 <script>
-// Every link that leaves the site's four pages (other sites, report and note PDFs) opens in a new tab;
-// links between Home, Projects, Experience and Notes are relative and stay in the same tab (Samson, 7 Nov 2026)
 document.querySelectorAll('a[href^="http"]').forEach(function (a) { a.target = '_blank'; a.rel = 'noopener'; });
 </script>
 

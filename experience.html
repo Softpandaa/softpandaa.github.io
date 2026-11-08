@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Industry, research and teaching experience of Samson Lam.">
 
 <title>Experience</title>
 <style>
@@ -30,10 +31,17 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
+<link href="./assets/img/favicon.svg" rel="icon" type="image/svg+xml">
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 
 
 <link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Experience">
+<meta property="og:description" content="Industry, research and teaching experience of Samson Lam.">
+<meta property="og:site_name" content="Samson Lam">
+<meta name="twitter:title" content="Experience">
+<meta name="twitter:description" content="Industry, research and teaching experience of Samson Lam.">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body>
@@ -52,10 +60,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 <script>
 (function () {
-  var f = location.pathname.split('/').pop();
+  var f = location.pathname.split('/').pop().replace(/\.html$/, '') || 'index';   // GitHub Pages also serves /projects etc. (8 Nov 2026)
   var links = document.querySelectorAll('.site-nav a');
   var hit = null;
-  links.forEach(function (a) { if (a.getAttribute('href') === f) hit = a; });
+  links.forEach(function (a) { if (a.getAttribute('href').replace(/\.html$/, '') === f) hit = a; });
   if (!hit) hit = links[0];
   hit.setAttribute('aria-current', 'page');
 })();
@@ -73,18 +81,18 @@ ul.task-list li input[type="checkbox"] {
 <div class="block-body">
 <div class="entry">
 <div class="entry-head">
-<p><span class="entry-role">Quantitative AI Architect Intern</span> <span class="when">May–Aug 2026</span></p>
+<p><span class="entry-role" role="heading" aria-level="3">Quantitative AI Architect Intern</span> <span class="when">May–Aug 2026</span></p>
 </div>
 <p><span class="entry-org">Deep Market Making, Inc.&nbsp;· New York</span></p>
 <ul>
 <li>Engineered a framework that automates buy-side best-execution review and broker/dealer selection for corporate bonds from more than a million trade records.</li>
 <li>Benchmarked pricing references for best-execution review against the realized forward price and in simulated dealer selection, given latent fair values and unobserved quotes in corporate-bond trade records.</li>
-<li>Established that better pricing data from the firm’s fair-value model captures 31.7% more edge than a stale-tape reference by supporting a stricter review, rising to 51.5% at block size and 54.9% in high yield.</li>
+<li>Established that better pricing data from the firm’s fair-value model captures 31.7% more edge than a stale-tape reference, rising to 51.5% at block size and 54.9% in high yield.</li>
 </ul>
 </div>
 <div class="entry">
 <div class="entry-head">
-<p><span class="entry-role">Quantitative Analyst Intern, Fixed Income</span> <span class="when">Dec 2023 – Mar 2024</span></p>
+<p><span class="entry-role" role="heading" aria-level="3">Quantitative Analyst Intern, Fixed Income</span> <span class="when">Dec 2023 – Mar 2024</span></p>
 </div>
 <p><span class="entry-org">Coordinates Capital Management Ltd.&nbsp;· Hong Kong</span></p>
 <ul>
@@ -94,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="entry">
 <div class="entry-head">
-<p><span class="entry-role">Investment Analyst Intern</span> <span class="when">Jul–Aug 2022</span></p>
+<p><span class="entry-role" role="heading" aria-level="3">Investment Analyst Intern</span> <span class="when">Jul–Aug 2022</span></p>
 </div>
 <p><span class="entry-org">Bowen Capital Limited · Hong Kong</span></p>
 <ul>
@@ -104,22 +112,22 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="entry">
 <div class="entry-head">
-<p><span class="entry-role">Equity Research Intern</span> <span class="when">May–Jul 2022</span></p>
+<p><span class="entry-role" role="heading" aria-level="3">Equity Research Intern</span> <span class="when">May–Jul 2022</span></p>
 </div>
 <p><span class="entry-org">Daiwa Capital Markets Hong Kong Limited · Hong Kong</span></p>
 <ul>
-<li>Covered the China and Hong Kong auto, transportation and industrial sectors, updating databases and assisting in maintaining financial models.</li>
+<li>Covered the China and Hong Kong auto, transportation and industrial sectors, assisting in updating financial models and databases.</li>
 <li>Contributed research support to institutional flash notes, memos and company reports.</li>
 </ul>
 </div>
 </div>
 </section>
 <section id="teaching" class="block">
-<h2>Research and teaching</h2>
+<h2>Research and Teaching</h2>
 <div class="block-body">
 <div class="entry">
 <div class="entry-head">
-<p><span class="entry-role">Research Assistant</span> <span class="when">Sep 2025 – May 2026</span></p>
+<p><span class="entry-role" role="heading" aria-level="3">Research Assistant</span> <span class="when">Sep 2025 – May 2026</span></p>
 </div>
 <p><span class="entry-org">Andrey Ermolov · Fordham University</span></p>
 <ul>
@@ -129,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="entry">
 <div class="entry-head">
-<p><span class="entry-role">Teaching Assistant</span> <span class="when">Fall 2025 – Fall 2026</span></p>
+<p><span class="entry-role" role="heading" aria-level="3">Teaching Assistant</span> <span class="when">Fall 2025 – Fall 2026</span></p>
 </div>
 <p><span class="entry-org">Fordham University, Gabelli School of Business</span></p>
 <div class="courses">
@@ -141,12 +149,12 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </div>
 <ul>
-<li>Responsibilities include leading review sessions, creating exam review material, grading exams and homework sets, and holding weekly office hours.</li>
+<li>Responsibilities include leading review sessions, creating exam review material, holding weekly office hours and grading exams and homework sets.</li>
 </ul>
 </div>
 <div class="entry">
 <div class="entry-head">
-<p><span class="entry-role">Instructor</span> <span class="when">Dec 2022 – Dec 2025</span></p>
+<p><span class="entry-role" role="heading" aria-level="3">Instructor</span> <span class="when">Dec 2022 – Dec 2025</span></p>
 </div>
 <p><span class="entry-org">Shatin Tsung Tsin Secondary School · Hong Kong</span></p>
 <ul>
@@ -160,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="block-body">
 <div class="entry">
 <div class="entry-head">
-<p><span class="entry-role">NUS Young Fellowship Programme</span> <span class="when">Jun–Jul 2025</span></p>
+<p><span class="entry-role" role="heading" aria-level="3">NUS Young Fellowship Programme</span> <span class="when">Jun–Jul 2025</span></p>
 </div>
 <p><span class="entry-org">National University of Singapore · Singapore</span></p>
 <ul>
@@ -170,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="entry">
 <div class="entry-head">
-<p><span class="entry-role">Co-founder and Head of the Macro Research Team</span> <span class="when">Jan 2023 – Jan 2025</span></p>
+<p><span class="entry-role" role="heading" aria-level="3">Co-founder and Head of the Macro Research Team</span> <span class="when">Jan 2023 – Jan 2025</span></p>
 </div>
 <p><span class="entry-org">CUHK Quant Trading Society (CUQTS) · Hong Kong</span></p>
 <ul>
@@ -185,13 +193,10 @@ ul.task-list li input[type="checkbox"] {
 </main>
 <footer class="site-footer">
   <div class="wrap footer-row">
-    <span>Last updated 7 November 2026</span>
-    <a href="https://github.com/Softpandaa/softpandaa.github.io">Site source on GitHub</a>
+    <span>Last updated November 8, 2026</span>
   </div>
 </footer>
 <script>
-// Every link that leaves the site's four pages (other sites, report and note PDFs) opens in a new tab;
-// links between Home, Projects, Experience and Notes are relative and stay in the same tab (Samson, 7 Nov 2026)
 document.querySelectorAll('a[href^="http"]').forEach(function (a) { a.target = '_blank'; a.rel = 'noopener'; });
 </script>
 

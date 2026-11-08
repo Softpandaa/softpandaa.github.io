@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Samson Lam, MS in Quantitative Finance student at Fordham Gabelli. Research interests in financial econometrics and the statistical theory of time series.">
 
 <title>Samson Lam</title>
 <style>
@@ -30,10 +31,17 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
+<link href="./assets/img/favicon.svg" rel="icon" type="image/svg+xml">
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 
 
 <link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Samson Lam">
+<meta property="og:description" content="Samson Lam, MS in Quantitative Finance student at Fordham Gabelli. Research interests in financial econometrics and the statistical theory of time series.">
+<meta property="og:site_name" content="Samson Lam">
+<meta name="twitter:title" content="Samson Lam">
+<meta name="twitter:description" content="Samson Lam, MS in Quantitative Finance student at Fordham Gabelli. Research interests in financial econometrics and the statistical theory of time series.">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body>
@@ -52,10 +60,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 <script>
 (function () {
-  var f = location.pathname.split('/').pop();
+  var f = location.pathname.split('/').pop().replace(/\.html$/, '') || 'index';   // GitHub Pages also serves /projects etc. (8 Nov 2026)
   var links = document.querySelectorAll('.site-nav a');
   var hit = null;
-  links.forEach(function (a) { if (a.getAttribute('href') === f) hit = a; });
+  links.forEach(function (a) { if (a.getAttribute('href').replace(/\.html$/, '') === f) hit = a; });
   if (!hit) hit = links[0];
   hit.setAttribute('aria-current', 'page');
 })();
@@ -72,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="hero-text">
 
 <div class="bio">
-<p>I am a <a href="https://www.fordham.edu/gabelli-school-of-business/academic-programs-and-admissions/graduate-programs/academic-programs/ms-programs/quantitative-finance/">Master of Science in Quantitative Finance (MSQF)</a> student at the Gabelli School of Business, Fordham University. I graduated from the <a href="https://www.qfrm.cuhk.edu.hk/">Quantitative Finance and Risk Management Science (QFRM)</a> program at The Chinese University of Hong Kong (CUHK) with First-Class Honours and minors in Mathematics and Statistics.</p>
+<p>I am a <a href="https://www.fordham.edu/gabelli-school-of-business/academic-programs-and-admissions/graduate-programs/academic-programs/ms-programs/quantitative-finance/">Master of Science in Quantitative Finance</a> student at the Gabelli School of Business, Fordham University. I graduated from the <a href="https://www.qfrm.cuhk.edu.hk/">Quantitative Finance and Risk Management Science</a> program at The Chinese University of Hong Kong (CUHK) with First-Class Honours and minors in Mathematics and Statistics.</p>
 <p>My research interests focus on financial econometrics and the statistical theory of time series, particularly the unique challenges posed by financial data. Asset returns frequently exhibit heavy tails, skewness, jumps and complex volatility patterns such as clustering, leverage effects and long memory.</p>
 <p>I am especially interested in developing efficient estimation techniques for models with intractable likelihoods and in devising statistical methods to distinguish between observationally similar mechanisms, such as regime switching and genuine long memory in volatility. Beyond estimation and identification, my broader interests extend to forecasting, risk and continuous-time modeling of financial processes.</p>
 <p><span class="personal">Outside research, I enjoy cooking, baking, playing badminton and traveling.</span></p>
@@ -123,13 +131,10 @@ ul.task-list li input[type="checkbox"] {
 </main>
 <footer class="site-footer">
   <div class="wrap footer-row">
-    <span>Last updated 7 November 2026</span>
-    <a href="https://github.com/Softpandaa/softpandaa.github.io">Site source on GitHub</a>
+    <span>Last updated November 8, 2026</span>
   </div>
 </footer>
 <script>
-// Every link that leaves the site's four pages (other sites, report and note PDFs) opens in a new tab;
-// links between Home, Projects, Experience and Notes are relative and stay in the same tab (Samson, 7 Nov 2026)
 document.querySelectorAll('a[href^="http"]').forEach(function (a) { a.target = '_blank'; a.rel = 'noopener'; });
 </script>
 
