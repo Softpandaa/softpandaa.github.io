@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="bio">
 <p>I am a <a href="https://www.fordham.edu/gabelli-school-of-business/academic-programs-and-admissions/graduate-programs/academic-programs/ms-programs/quantitative-finance/">Master of Science in Quantitative Finance (MSQF)</a> student at the Gabelli School of Business, Fordham University. I graduated from the <a href="https://www.qfrm.cuhk.edu.hk/">Quantitative Finance and Risk Management Science (QFRM)</a> program at The Chinese University of Hong Kong (CUHK) with First-Class Honours and minors in Mathematics and Statistics.</p>
-<p>My research interests focus on financial econometrics and the statistical theory of time series, particularly the unique challenges posed by financial data. Financial returns frequently exhibit heavy tails, skewness, jumps and complex volatility patterns such as clustering, leverage effects, structural breaks and long memory.</p>
+<p>My research interests focus on financial econometrics and the statistical theory of time series, particularly the unique challenges posed by financial data. Asset returns frequently exhibit heavy tails, skewness, jumps and complex volatility patterns such as clustering, leverage effects and long memory.</p>
 <p>I am especially interested in developing efficient estimation techniques for models with intractable likelihoods and in devising statistical methods to distinguish between observationally similar mechanisms, such as regime switching and genuine long memory in volatility. Beyond estimation and identification, my broader interests extend to forecasting, risk and continuous-time modeling of financial processes.</p>
 <p><span class="personal">Outside research, I enjoy cooking, baking, playing badminton and traveling.</span></p>
 </div>
@@ -128,38 +128,10 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </footer>
 <script>
-// External links open in a new tab; links on softpandaa.github.io, the report PDFs included, stay in the same tab
-document.querySelectorAll('a[href^="http"]').forEach(function (a) {
-  if (a.hostname !== 'softpandaa.github.io' && a.hostname !== location.hostname) { a.target = '_blank'; a.rel = 'noopener'; }
-});
+// Every link that leaves the site's four pages (other sites, report and note PDFs) opens in a new tab;
+// links between Home, Projects, Experience and Notes are relative and stay in the same tab (Samson, 7 Nov 2026)
+document.querySelectorAll('a[href^="http"]').forEach(function (a) { a.target = '_blank'; a.rel = 'noopener'; });
 </script>
-<script id="quarto-html-after-body" type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/softpandaa\.github\.io");
-      var isInternal = (href) => {
-          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-      }
-      // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-      for (var i=0; i<links.length; i++) {
-        const link = links[i];
-        if (!isInternal(link.href)) {
-          // undo the damage that might have been done by quarto-nav.js in the case of
-          // links that we want to consider external
-          if (link.dataset.originalHref !== undefined) {
-            link.href = link.dataset.originalHref;
-          }
-            // target, if specified
-            link.setAttribute("target", "_blank");
-            if (link.getAttribute("rel") === null) {
-              link.setAttribute("rel", "noopener");
-            }
-        }
-      }
-  });
-  </script>
 
 
 
