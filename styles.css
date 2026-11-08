@@ -8,8 +8,7 @@
   --font-ui: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
   --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 
-  --measure: 46rem;
-  --diagram-edge: var(--muted);   }
+  --measure: 56rem;              --diagram-edge: var(--muted);   }
 
 html { font-size: 100%; -webkit-text-size-adjust: 100%; scroll-padding-top: 5rem; }   body {
   margin: 0;
@@ -119,7 +118,7 @@ main.page { padding-block: 3rem 0; }
 .kind { display: inline-flex; align-items: baseline; gap: 0.35rem; color: var(--ink-2); }
 .kind::before { content: ""; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--accent); align-self: center; }
 .kind-course::before { background: var(--fin); }
-.proj-finding { color: var(--ink); max-width: 36rem; }   .entry > ul { max-width: 36rem; }
+.proj-finding { color: var(--ink); }
 .proj-links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.35rem; }
 .btn {
   font-size: 0.8rem; line-height: 1.5; text-decoration: none; color: var(--ink-2);
