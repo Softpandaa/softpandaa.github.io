@@ -64,9 +64,7 @@ main.page { padding-block: 3rem 0; }
 
 .page-head { display: grid; gap: 0.9rem; padding-bottom: 2.25rem; }
 .page-head > h1 { font-size: clamp(2rem, 1.6rem + 1.6vw, 2.5rem); line-height: 1.1; }
-.page-head > p { color: var(--ink-2); max-width: 40rem; }
-
-.block { padding-top: 2.75rem; }
+.page-head > p { color: var(--ink-2); }   .block { padding-top: 2.75rem; }
 .page-head + .block { padding-top: 0; }   .block > h2 {
   font-size: 1.4rem; line-height: 1.25;
   padding-bottom: 0.6rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--rule);
